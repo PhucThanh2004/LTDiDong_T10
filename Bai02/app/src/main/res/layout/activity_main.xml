@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/main"
     tools:context=".MainActivity">
 
-    <!-- Tiêu đề -->
     <TextView
         android:id="@+id/textView2"
         android:layout_width="404dp"
@@ -21,7 +21,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.039" />
 
-    <!-- Danh sách thiết bị Bluetooth -->
     <ListView
         android:id="@+id/listTb"
         android:layout_width="343dp"
@@ -31,15 +30,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <!-- Nút Tìm Thiết Bị -->
     <Button
         android:id="@+id/btnTimthietbi"
         android:layout_width="409dp"
         android:layout_height="67dp"
         android:layout_marginTop="44dp"
-        android:layout_marginEnd="4dp"
         android:text="Tìm Thiết Bị"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listTb" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

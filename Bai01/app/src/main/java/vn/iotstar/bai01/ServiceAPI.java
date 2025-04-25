@@ -16,13 +16,9 @@ import okhttp3.RequestBody;
 import java.util.List;
 
 public interface ServiceAPI {
-    public static final String BASE_URL = "http://app.iotstar.vn/appfoods/";
+    public static final String BASE_URL = "http://app.iotstar.vn:8081/appfoods/";
+    Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
 
-    Gson gson = new GsonBuilder()
-            .setDateFormat("yyyy MM dd HH:mm:ss")
-            .create();
-
-    // Khởi tạo Retrofit đúng cách
     ServiceAPI serviceapi = new Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create(gson))
@@ -31,11 +27,12 @@ public interface ServiceAPI {
 
     @Multipart
     @POST("upload.php")
-    Call<List<ImageUpload>> upload(@Part(Const.MY_USERNAME) RequestBody username,
+    Call<List<ImageUpload>> upload(@Part(Const.MY_USERNAME)RequestBody username,
                                    @Part MultipartBody.Part avatar);
 
     @Multipart
     @POST("upload1.php")
-    Call<Message> upload1(@Part(Const.MY_USERNAME) RequestBody username,
+    Call<Message> upload1(@Part(Const.MY_USERNAME)RequestBody username,
                           @Part MultipartBody.Part avatar);
+
 }

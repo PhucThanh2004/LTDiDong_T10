@@ -1,58 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UploadPhotoActivity">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".MainActivity">
 
-    <!-- Thanh tiêu đề -->
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="#F44336"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="Back"
-        app:titleTextColor="@android:color/white"
-        app:navigationIcon="@drawable/ic_left_arrow"/>
+        android:layout_height="wrap_content"
+        android:background="#FF7043"
+        android:gravity="center_vertical"
+        android:padding="10dp">
 
-    <!-- Ảnh đại diện mặc định -->
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="Back"
+            android:padding="5dp"
+            android:src="@drawable/ic_left_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Back"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="EditText Username"
+        android:padding="10dp"
+        android:background="@android:color/darker_gray"/>
+
     <ImageView
-        android:id="@+id/img_Upload"
+        android:id="@+id/imgChoose"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/profile_placeholder"
-        android:scaleType="centerInside"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="150dp" />
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/profile_placeholder"/>
 
-    <!-- Nút chọn file -->
     <Button
-        android:id="@+id/btn_choose_file"
-        android:layout_width="200dp"
+        android:id="@+id/btnChoose"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="CHỌN FILE"
-        android:backgroundTint="#BA0000"
+        android:backgroundTint="#FF7043"
         android:textColor="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@id/img_Upload"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp" />
 
-    <!-- Nút Upload -->
+        android:layout_marginTop="10dp"/>
+
     <Button
-        android:id="@+id/btn_upload"
-        android:layout_width="200dp"
+        android:id="@+id/btnUpload"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="UPLOAD IMAGES"
-        android:backgroundTint="#BA0000"
+        android:backgroundTint="#FF7043"
         android:textColor="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@id/btn_choose_file"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="5dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView Username"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"/>
+
+
+</LinearLayout>

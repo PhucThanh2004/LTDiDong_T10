@@ -1,19 +1,19 @@
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ControlActivity">
+    tools:context=".BluetoothControl">
 
-    <!-- Các nút điều khiển thiết bị -->
     <ImageButton
         android:id="@+id/btnTb1"
         android:layout_width="116dp"
         android:layout_height="112dp"
         android:layout_marginStart="60dp"
         android:layout_marginTop="92dp"
-        android:background="@drawable/tb1on"
+        android:background="@drawable/bton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -23,13 +23,12 @@
         android:layout_height="112dp"
         android:layout_marginTop="92dp"
         android:layout_marginEnd="60dp"
-        android:background="@drawable/tb7on"
+        android:background="@drawable/bton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.813"
         app:layout_constraintStart_toEndOf="@+id/btnTb1"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <!-- Thông báo -->
     <TextView
         android:id="@+id/textV1"
         android:layout_width="400dp"
@@ -42,9 +41,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnTb1" />
-
-    <!-- Thông tin thiết bị -->
+        app:layout_constraintTop_toBottomOf="@+id/btnTb1"/>
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -54,7 +51,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/textViewMAC"
         android:layout_width="wrap_content"
@@ -68,17 +64,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <!-- Nút ngắt kết nối -->
     <ImageButton
         android:id="@+id/btnDisc"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_marginTop="76dp"
-        android:background="@drawable/btnotconnect"
+        android:background="@drawable/power_on"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textV1" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

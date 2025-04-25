@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "vn.iotstar.bai01"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "vn.iotstar.bai01"
